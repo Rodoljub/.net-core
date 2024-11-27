@@ -1,0 +1,71 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>Library</OutputType>
+		<TargetFramework>net7.0</TargetFramework>
+		<PackageId>Quantum.Data</PackageId>
+		<PackageVersion></PackageVersion>
+		<Authors>Quantum</Authors>
+		<Description>Quantum.Data .NET Core package</Description>
+		<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+		<PackageReleaseNotes>First release</PackageReleaseNotes>
+		<Copyright>Copyright 2017. All rights reserved.</Copyright>
+		<PackageTags>Quantum Quantum.Data Net Core</PackageTags>
+		<LangVersion>10.0</LangVersion>
+		<!--<Nullable>enable</Nullable>-->
+		<ApplicationIcon />
+		<StartupObject />
+	</PropertyGroup>
+	<PropertyGroup>
+		<GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
+		<LangVersion>7.1</LangVersion>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='QA|AnyCPU'" />
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+		<LangVersion>10.0</LangVersion>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<LangVersion>10.0</LangVersion>
+	</PropertyGroup>
+	<ItemGroup>
+		<Compile Remove="Repositories\Common\**" />
+		<EmbeddedResource Remove="Repositories\Common\**" />
+		<None Remove="Repositories\Common\**" />
+	</ItemGroup>
+	<ItemGroup>
+		<Compile Remove="Entities\Common\UserProfileVersioned.cs" />
+		<Compile Remove="Entities\IBaseVersionedEntity.cs" />
+		<Compile Remove="Entities\IEntityVersion.cs" />
+		<Compile Remove="Entities\IUserEntityVersion.cs" />
+		<Compile Remove="Entities\IUserVersionedEntity.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Compile Include="Repositories\Common\BaseRepository.cs" />
+		<Compile Include="Repositories\Common\Contracts\IBaseRepository.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Duende.IdentityServer.AspNetIdentity" Version="6.2.3" />
+		<PackageReference Include="Duende.IdentityServer.EntityFramework" Version="6.2.3" />
+		<PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="7.0.4" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.4" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="7.0.4" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.4" />
+		<PackageReference Include="Microsoft.Extensions.Configuration" Version="7.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="7.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="7.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="7.0.0" />
+		<!--<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.2" PrivateAssets="All" />-->
+		<PackageReference Include="Serilog" Version="2.12.0" />
+		<PackageReference Include="Serilog.Sinks.Console" Version="4.1.0" />
+
+
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Quantum.Common.Utility\Quantum.Utility.csproj" />
+	</ItemGroup>
+
+
+</Project>

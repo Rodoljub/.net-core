@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>net7.0</TargetFramework>
+    <PackageId>Quantum.Core</PackageId>
+    <PackageVersion></PackageVersion>
+    <Authors>Quantum</Authors>
+    <Description>Quantum.Core .NET Core package</Description>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageReleaseNotes>First release</PackageReleaseNotes>
+    <Copyright>Copyright 2017. All rights reserved.</Copyright>
+    <PackageTags>Quantum Quantum.Core Net Core</PackageTags>
+    <ApplicationIcon />
+    <StartupObject />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove=".gitignore" />
+    <None Remove="README.md" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="HotChocolate" Version="13.0.0" />
+    <PackageReference Include="HotChocolate.AspNetCore" Version="13.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Quantum.Common.Data\Quantum.Data.csproj" />
+    <ProjectReference Include="..\Quantum.Integration\Quantum.Integration.csproj" />
+  </ItemGroup>
+
+</Project>

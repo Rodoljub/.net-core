@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+    @*<meta http-equiv="Content-Security-Policy" content="img-src 'self' data: http://192.168.1.105:4040/lib/mdl/material.min.js; 
+          ;
+          script-src 'self' https://connect.facebook.net/en_US/sdk.js">*@
+
+    <title>Occpy</title>
+
+    <link rel="icon" type="image/x-icon" href="~/favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="~/favicon.ico" />
+
+    <link rel="stylesheet" href="~/lib/mdl/material.min.css">
+    @*<script src="~/js/material.min.js"></script>*@
+
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/override.css" />
+
+</head>
+<body>
+    <partial name="_ValidationSummary" />
+    <partial name="_Spinner" />
+    <div>
+        @RenderBody()
+    </div>
+    <script src="~/lib/mdl/material.min.js"></script>
+    <script src="~/lib/jquery/dist/jquery.slim.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>

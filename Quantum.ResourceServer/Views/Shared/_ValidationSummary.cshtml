@@ -1,0 +1,20 @@
+﻿@if (ViewContext.ModelState.IsValid == false)
+{
+                @*<div class="alert alert-danger">
+                    <strong>Error</strong>
+                    <div asp-validation-summary="All" class="danger"></div>
+                </div>*@
+
+                @*<div id="demo-snackbar-example" class="mdl-js-snackbar mdl-snackbar">
+                    <div asp-validation-summary="All" class="mdl-snackbar__text"></div>
+                    <button class="mdl-snackbar__action" type="button"></button>
+                </div>*@
+
+
+
+                <script src="~/js/validation.js" defer></script>
+}
+else {
+    <span id="valid-span"></span>
+    <script src="~/js/validation.js" defer></script>
+} 

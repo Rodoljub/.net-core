@@ -1,0 +1,18 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/Common/v15
+/bin
+/obj
+/Quantum.Data/obj/Debug/netcoreapp1.1
+/Quantum.Data/obj/project.assets.json
+/Quantum.Data/obj/Debug/netcoreapp1.1
+/Quantum.Data/bin/Debug/netcoreapp1.1
+/Quantum.Data/obj
+/Quantum.Utility/obj
+/Quantum.Utility/bin/Debug/netcoreapp1.1
+/.vs/Quantum.Data/v15/Server/sqlite3
+/.vs/Quantum.Data/DesignTimeBuild
+/.vs/Quantum.Data/v15/.suo
+/.vs

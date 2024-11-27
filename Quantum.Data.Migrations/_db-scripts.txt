@@ -1,0 +1,9 @@
+﻿
+************************************************* QDb Context Migration *********************************************************************
+
+dotnet ef migrations add 'ConsolidatedMigration'-c QDbContext -v
+
+dotnet ef database update -c QDbContext -v
+
+dotnet tool update --global dotnet-ef --version 7.0.4
+

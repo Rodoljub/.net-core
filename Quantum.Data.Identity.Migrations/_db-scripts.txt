@@ -1,0 +1,30 @@
+﻿
+************************************************* IdentityServer 4 Migration *********************************************************************
+
+dotnet ef migrations add InitialIdentityServerPersistedGrantDbMigration -c PersistedGrantDbContext -o Migrations/IdentityServer/PersistedGrantDb -v
+dotnet ef migrations add InitialIdentityServerConfigurationDbMigration -c ConfigurationDbContext -o Migrations/IdentityServer/ConfigurationDb -v
+
+****************************************** IdentityServer 6 Migration ***********************************************************************************
+
+dotnet ef migrations add UpdateToDuende_v6_0 -c PersistedGrantDbContext -o Migrations/IdentityServer/PersistedGrantDb -v
+dotnet ef migrations add UpdateToDuende_v6_0 -c ConfigurationDbContext -o Migrations/IdentityServer/ConfigurationDb -v
+
+***************************************** Update database **********************************************************************************************
+
+dotnet ef database update -c PersistedGrantDbContext -v
+dotnet ef database update -c ConfigurationDbContext -v
+
+*********************************************************************************************************************************************************
+
+************************************************* IdentityServer Configuration Data Seeder **************************************************************
+
+To execute IdentityServer configuration data seeder run: 
+
+	dotnet ef database update -c ConfigurationDbContext -v
+
+***************************************************** Run EF Tool version Update ************************************************************************
+
+dotnet tool update --global dotnet-ef --version 7.0.2
+
+
+

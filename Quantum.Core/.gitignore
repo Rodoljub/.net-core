@@ -1,0 +1,20 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/obj/Debug/netcoreapp2.2
+/obj
+/bin/Debug/netcoreapp2.2
+/bin/Debug/netcoreapp3.1
+/bin/Debug/net5.0
+/.vs
+bin/Release/net5.0/Quantum.Core.deps.json
+bin/Release/net5.0/Quantum.Core.dll
+bin/Release/net5.0/Quantum.Core.pdb
+bin/Release/net5.0/Quantum.Data.dll
+bin/Release/net5.0/Quantum.Integration.dll
+bin/Release/net5.0/Quantum.Integration.pdb
+bin/Release/net5.0/Quantum.Data.pdb
+bin/Release/net5.0/Quantum.Utility.dll
+bin/Release/net5.0/Quantum.Utility.pdb
+bin/Release/net5.0/ref/Quantum.Core.dll

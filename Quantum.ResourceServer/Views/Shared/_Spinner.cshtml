@@ -1,0 +1,44 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    <div class="app-loading" id="app-loading" style="display: none">
+
+        <!--   style="transform: rotateZ(45deg);"-->
+        <svg version="1.1" #svgElementSpinner
+             id="Layer_1"
+             xmlns="http://www.w3.org/2000/svg"
+             xmlns:xlink="http://www.w3.org/1999/xlink"
+             x="0px" y="0px"
+             width="40%" height="40%"
+             viewBox="0 0 80 80" enable-background="new 0 0 70 70"
+             xml:space="preserve" fit=""
+             preserveAspectRatio="xMidYMid meet"
+             focusable="false" class="spinner"
+             style="transform: rotateZ(45deg);">
+<!-- fill="#e91e63" -->
+        <circle cx="40" cy="40" r="12" visibility="visible" fill="#e91e63"></circle>
+
+        <path d="M20,40a20,32 0 1,0 40,0a20,32 0 1,0 -40,0"
+              id="orbit1" fill="none" stroke-width="8" stroke="gray" opacity="0.7" />
+    <!-- fill="#e91e63" -->
+        <circle  #spinnerCircle1 visibility="visible" r="5"
+                fill="#e91e63" opacity="1">
+        <animateMotion begin="0s" dur="1s" repeatCount="indefinite"
+                       path="M20,40a20,32 0 1,0 40,0a20,32 0 1,0 -40,0">
+        </animateMotion>
+    </circle>
+
+        <path d="M8,40a32,20 0 1,0 64,0a32,20 0 1,0 -64,0"
+              id="orbit2" fill="none" stroke-width="8" stroke="gray" opacity="0.7" />
+    <!-- fill="#e91e63" -->
+        <circle #spinnerCircle2 visibility="visible" r="5"
+                fill="#e91e63" opacity="1">
+        <animateMotion begin="0s" dur="1.2s" repeatCount="indefinite"
+                       path="M8,40a32,20 0 1,0 64,0a32,20 0 1,0 -64,0">
+        </animateMotion>
+    </circle>
+</svg>
+    </div>
+
+}
